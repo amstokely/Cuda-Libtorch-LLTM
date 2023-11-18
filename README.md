@@ -1,4 +1,4 @@
-# cuda_libtorch_example
+# Cuda Libtorch LLTM
 Implementation of a custom torch CUDA kernel based off of this example (https://pytorch.org/tutorials/advanced/cpp_extension.html).
 The only significant difference is I use raw pointers in the CUDA kernels vs. Tensor accessors. With this modification, the forward pass kernel is roughly 30X faster than the PyTorch version (both using CUDA). Interestingly, the custom backwards pass kernel is only 5% faster. All benchmarks were run on an Nvidia RTX5000 gpu.
 
